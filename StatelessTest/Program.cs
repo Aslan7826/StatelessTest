@@ -9,11 +9,13 @@ namespace StatelessTest
         static void Main(string[] args)
         {
             var lightManager = new LightManager();
-            lightManager.Connect(false, new List<string>());
-            lightManager.Connect(false, new List<string>() { "cpu", "Hd" });
-            lightManager.Connect(true, new List<string>());
-            lightManager.Connect(true, new List<string>() { "cpu", "Hd" });
+            lightManager.Connect(false,Light.Green);
+            lightManager.Connect(false,Light.GreenTimeOut);
+            lightManager.Connect(true, Light.Yellow);
+            lightManager.Connect(true, Light.YellowTimeOut);
+            lightManager.Connect(true, Light.Gray);
 
+            lightManager.DicConnect(false);
             lightManager.DicConnect(false);
             lightManager.DicConnect(true);
             lightManager.DicConnect(true);
